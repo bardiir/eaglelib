@@ -1026,12 +1026,35 @@ Output from 1.25V to 11V&lt;/li&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="24AA*">
+<deviceset name="24AA*" prefix="IC">
 <gates>
 <gate name="G$1" symbol="24XXEEPROM" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SO08">
+<device name="-I/SN" package="SO08">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name="1026">
+<attribute name="VALUE" value="1mbit" constant="no"/>
+</technology>
+<technology name="128">
+<attribute name="VALUE" value="128kbit" constant="no"/>
+</technology>
+<technology name="256">
+<attribute name="VALUE" value="256kbit" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-I/P" package="DIP08">
 <connects>
 <connect gate="G$1" pin="A0" pad="1"/>
 <connect gate="G$1" pin="A1" pad="2"/>
